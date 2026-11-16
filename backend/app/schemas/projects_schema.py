@@ -19,7 +19,7 @@ class ProjectCreate(ProjectBase):
     pass
 
 class ProjectUpdate(BaseModel):
-    title: Optional[str] = Field(None, max_lenght=150)
+    title: Optional[str] = Field(None, max_length=150)
     status: Optional[str] = None
     current_row: Optional[int] = None
     target_row: Optional[int] = None

@@ -6,11 +6,11 @@ class ProjectLogsBase(BaseModel):
     row_number: int
     photo_url: str = Field(..., max_length=500)
 
-class ProjectLogsCreate(BaseModel):
+class ProjectLogsCreate(ProjectLogsBase):
     pass
 
 class ProjectLogsUpdate(BaseModel):
-    row_number: Optional[int]
+    row_number: Optional[int] = Field(None, ge=0)
     note_text: Optional[str] = Field(None, max_length=255)
     photo_url: Optional[str] = Field(..., max_length=500)
 
