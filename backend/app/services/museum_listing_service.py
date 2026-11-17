@@ -14,7 +14,7 @@ def create_museum_listing(db: Session, listing: MuseumListingCreate, project_id:
     if not project:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Projct not found or access denied"
+            detail="Project not found or access denied"
         )
 
     # 2. enforce the 1-to-1 unique constrain cleanly before inserting
@@ -23,7 +23,7 @@ def create_museum_listing(db: Session, listing: MuseumListingCreate, project_id:
     if existing_listing:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail="THis project has already been published to the museum."
+            detail="This project has already been published to the museum."
         )
 
     # 3. unpack validated schema fields and attach project_id + user_id

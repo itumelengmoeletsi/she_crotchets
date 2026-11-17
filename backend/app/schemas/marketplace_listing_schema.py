@@ -21,4 +21,4 @@ class MarketplaceListingResponse(MarketplaceListingBase):
     museum_item_id: int
     created_at: datetime
 
-    model_condig = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(from_attributes=True)

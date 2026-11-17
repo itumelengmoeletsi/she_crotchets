@@ -16,7 +16,7 @@ class YarnStashUpdate(BaseModel):
     brand: Optional[str] = Field(None, max_length=255)
     colorway: Optional[str] = Field(None, max_length=100)
     weight_class: Optional[str] = Field(None, max_length=50)
-    fibre_content: Optional[str] = Field(None, max_length=100)
+    fiber_content: Optional[str] = Field(None, max_length=100)
     skein_count: Optional[int] = None
 
 class YarnStashResponse(YarnStashBase):
